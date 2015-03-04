@@ -621,7 +621,24 @@ fieldset.heading legend {
 }
 
 #statusEffects {
-
+    .tabs>ul {
+        margin-top: -50px;
+    }
+    .tabs>ul>li.tab-active>a {
+        background-color: $maroon;
+        border: none;
+        color: $white;
+    }
+    .tabs>ul>li.tab-active>a:hover {
+        background-color: none;
+    }
+    .tabs>ul>li>a:hover {
+        background: none;
+        border: none;
+    }
+    .tabs>ul {
+        border-bottom: 2px dotted $gold;
+    }
 }
 
 // Character Creation

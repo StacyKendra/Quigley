@@ -434,6 +434,20 @@ fieldset.heading legend {
   #fightdice ul {
     padding: 0px; }
 
+#statusEffects .tabs > ul {
+  margin-top: -50px; }
+#statusEffects .tabs > ul > li.tab-active > a {
+  background-color: #501322;
+  border: none;
+  color: #f4f4f4; }
+#statusEffects .tabs > ul > li.tab-active > a:hover {
+  background-color: none; }
+#statusEffects .tabs > ul > li > a:hover {
+  background: none;
+  border: none; }
+#statusEffects .tabs > ul {
+  border-bottom: 2px dotted #d69426; }
+
 #charElements {
   margin-top: -50px; }
   #charElements h2 {
