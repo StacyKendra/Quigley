@@ -1,0 +1,92 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Base.cshtml";
+}
+
+<section id="pageheader">
+    <h1>Dice Rules</h1>
+</section>
+
+<section id="diceBasics" class="row">
+    <h1>Don't be scared. The dice rules are very simple...</h1>
+    <ul>
+        <li class="col-s-6">
+            <h3>You <strong>must</strong> roll for defense.</h3>
+            <p>Unless you plan to simply take the blow, you must roll for defense. You do <strong>not</strong> need to roll to attack - only to defend! Bear in mind that you CAN simply opt to take a hit. There's no need to roll defense against someone trying to slap you in the face or lightly shove you, for example, unless your character would specifically attempt to avoid it. There are other situations, too, where your character may be unable to realistically defend against a severe blow.</p>
+        </li>
+        <li class="col-s-6">
+            <h3>You <strong>may</strong> roll for other things.</h3>
+            <p>There are many other reasons to roll a dice: to aid in decision-making, to determine whether or not your character is able to perform a feat which wasn't assured to succeed, or even just for fun. For example, some people may roll a dice to see if their character is able to control their temper, to decide whether or not the character gets up the courage to kiss someone, or to judge if the character is able to catch someone who is running away. If you're not sure what to do, it's safe to say you can err on the side of rolling.</p>
+        </li>
+        <li>
+            <h3>Logic trumps dice!</h3>
+            <div>
+                <img src="/Css/images/temp/logic.png" />
+                <h4>Think before you roll.</h4>
+            </div>
+            <p><b>The result of a roll should be portrayed as it applies to your character!</b> For example, if a child runs up to your big, bad dude wearing a kevlar vest and attempts to "stab" him in the stomach with a plastic butterknife, your character will not end up writhing and bleeding on the floor even if you roll a 1.</p>
+            <p><b>Rolling cannot be used as an excuse to have your character do unrealistic things!</b> Ask yourself: am I rolling because I am hoping to justify my character's actions, or am I rolling because I think it really makes sense to roll? For example, you may think that it seems unlikely for your character to catch up with a speeding car when running after it on foot. Even if you roll a 20, your character shouldn't realistically be able to do this - so don't bother rolling.</p>
+            <p><b>Don't bother rolling when you think your character would realistically react a certain way!</b> Is your character annoyed? Do you want to have him punch another character in the face? Then don't roll to see if he keeps his temper. You're already hoping for a failure in this case, so just have your character do what you feel like he would do, rather than leaving it up to chance.</p>
+        </li>
+    </ul>
+
+</section>
+
+<section id="diceRules" class="row">
+
+    <fieldset class="heading"><legend>How to Roll</legend></fieldset>
+
+    <ul>
+        <li class="steps col-s-8">
+            <ul>
+                <li>
+                    <img src="/Css/images/temp/megaphone.png" />
+                    <h4>Step 1: Announce your roll.</h4>
+                    <p>Before rolling, you must state what the roll is for. You might say a simple word like <i>Defense</i> or <i>Composure</i>, or you may choose to be more specific: <i>Defense vs. Bad Guy #2</i> or <i>Ability to keep mouth shut under duress</i>. Calling the roll before the roll is made prevents people from cheating.</p>
+                </li>
+                <li>
+                    <img src="/Css/images/temp/d20.png" />
+                    <h4>Step 2: Roll a 1d20.</h4>
+                    <p>Type /roll 1d20 in the room to roll a dice. Be sure not to forget any status effects that may affect the final result of the roll. You may apply a penalty or bonus to your roll after rolling, or you can do it in the roll by typing /roll 1d20-2 or /roll 1d20+2. If you do not specify otherwise, low will be considered bad for your character.</p>
+                </li>
+                <li>
+                    <img src="/Css/images/temp/fight.png" />
+                    <h4>Step 3: React accordingly.</h4>
+                    <p>Include the result of the roll in your next in character post. The lower the roll, the worse off your character should be, and the higher, the better. Consult the chart for an exact listing of what each roll means. If there can be no "middling" result, consider flipping a coin instead by typing /roll passfail.</p>
+                </li>
+            </ul>
+        </li>
+        <li class="chart col-s-4">
+            <h4>Results Chart:</h4>
+            <ul>
+                <li>
+                    <p><strong>1: Critical Failure</strong></p>
+                    <p>The worst possible outcome occurs. You may not attack during the round immediately following rolling a 1 on defense.</p>
+                </li>
+                <li>
+                    <p><strong>2 - 7: Failure</strong></p>
+                    <p>You fail your attempt. A higher failure is less severe than a lower failure, but still a failure. In terms of defense, a 7 should still mean your character is hurt.</p>
+                </li>
+                <li>
+                    <p><strong>8 - 12: Middling</strong></p>
+                    <p>Not quite a full-on failure, but not quite a success, either. Valid middling reactions on defense may include: getting grazed, being knocked off balance by a block, effective tanking of a blow, dodging at the cost of throwing yourself to the ground, and so forth.</p>
+                </li>
+                <li>
+                    <p><strong>13 - 19: Success</strong></p>
+                    <p>You succeed your attempt. A low success should be barely scraping by, while a higher success may be portrayed as succeeding with ease.</p>
+                </li>
+                <li>
+                    <p><strong>20: Critical Success</strong></p>
+                    <p>The best possible outcome occurs. When this occurs on a defense roll, you may choose to do two aimed attacks against the opponent.</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</section>
+
+<section id="diceLinks">
+
+    <fieldset class="heading"><legend>Further Reading</legend></fieldset>
+
+</section>

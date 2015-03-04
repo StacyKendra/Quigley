@@ -1,0 +1,279 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Base.cshtml";
+}
+
+<section id="pageheader">
+    <h1>Fighting at Quigley</h1>
+</section>
+
+<section id="fightrules">
+    <h1>Fight scenes are streamlined and snappy at Quigley...</h1>
+    <ul class="row">
+        <li class="col-m-6">
+            <h3>You may only do one aimed attack per round.</h3>
+            <p>An aimed attack is an attack which is specifically directed at a certain area of the body: a punch to the face, a shotgun blast to the knee, a magic missile straight to the chest, a handful of sand in the eyes. One exception is that you may do two aimed attacks in a round immediately following rolling a 20 on defense. These may be aimed at the same target.</p>
+        </li>
+        <li class="col-m-6">
+            <h3>You may do more than one broad attack per round.</h3>
+            <p>A broad attack is an attack which doesn't specify a specific part of the body: shooting at someone with a gun at a distance, blindly punching at someone, a wild slash with a sword, tossing a handful of knives at someone. A broad attack may still badly hurt a character depending on the defense roll, but the player simply has more control over where the blow lands.</p>
+        </li>
+    </ul>
+    <ul class="numofattacks row">
+        <li class="col-m-6">
+            <h3>You may attack each target once per round, up to three attacks.</h3>
+            <p>If you are fighting multiple opponents, you may attack each opponent once per round. But you still may only attack one of them with an aimed attack. So, if you were fighting three people, you could try cutting off one opponent's arm, and then slash your sword at the other two without specifying a specific area of their body. Keep in mind it isn't always realistic to maximize this; for example, a character may not be close enough to attack every opponent in the fight. Additionally, you are limited to a total of three attacks, so if you are fighting a gang of four people, you'll only be able to attack three of them at best.</p>
+        </li>
+        <li class="col-m-6">
+            <h3>A highly destructive attack may not be coupled with additional attacks.</h3>
+            <p>If your attack stands to hurt several people at once or completely destroy a single target, such as throwing a grenade, spraying a crowd with a flamethrower, firing a missile, or sending a magical fireball in someone's general direction, then you can only do one of these types of attacks per round - with no other attacks.</p>
+        </li>
+    </ul>
+</section>
+
+<section id="fightdice">
+
+    <ul class="row">
+        <li class="col-m-9">
+            <h3>Dice decide whether or not you are hit.</h3>
+            <p>You can read all about the dice system <a href="#">on its own page</a>. Specifically concerning fighting, though, here's what you need to know. <strong>If you roll a 1</strong>, you may not attack at all during the following round. <strong>If you roll a 20</strong>, you may do two aimed attacks in a single round - even against a single target. <strong>This means they will have to roll two defense rolls</strong>, rather than the normal one. Certain circumstances may affect your roll's outcome positively or negatively - <strong>up to a modifier cap of plus or minus 3</strong>. That means even if you have negative statuses that would amount to more than 3, you only have to take -3. <strong>Status effects may come with additional rules</strong>, so be sure to read the list below.</p>
+        </li>
+        <li class="col-m-3 hidden-s hidden-xs">
+            <img src="/Css/images/temp/d20.png" />
+        </li>
+    </ul>
+
+</section>
+
+<section id="statusEffects">
+
+    <fieldset class="heading"><legend>Status Effects</legend></fieldset>
+
+    <div class="tabs" data-tabs="">
+        <ul>
+            <li class="tab-active"><a href="#">Injuries</a></li>
+            <li><a href="#">Ailments</a></li>
+            <li><a href="#">Situations</a></li>
+            <li><a href="#">Leverages</a></li>
+        </ul>
+        <section class="tab-pane-active">
+            <ul>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Bleeding</h4>
+                        <p>You have sustained one or more injuries from which you are bleeding profusely (i.e. one that would require pressure, bandages, or stitches to stop the bleeding). For every such injury you receive, take -1 to your defense rolls. After sustaining three of these wounds, you become Dizzy.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Limping</h4>
+                        <p>One or both of your legs has been injured or otherwise disabled. You cannot escape from, catch up to, or keep pace with anything which is not also Limping or Restrained. You cannot roll to your feet if you get Knocked Down.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Dazed, Stunned, Concussed</h4>
+                        <p>If your character has been hit in the head once in the past 24 hours, then the character is Dazed, receiving -1 to defense. If your character has been hit in the head twice in the past 24 hours, then the character is Stunned, receiving -2 to defense. If your character has been hit in the head three times the past 24 hours, then the character is Concussed, receiving -3 to defense. A Concussed character receiving another blow to the head will be immediately Knocked Out.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Crippled</h4>
+                        <p>Empty</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Blinded</h4>
+                        <p>Empty</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Drunk</h4>
+                        <p>Empty</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Dizzy</h4>
+                        <p>Whether from alcohol, poison, bleeding, or some other source, you are feeling light-headed and the room is spinning. You cannot do any aimed attacks while Dizzy.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Malnourished</h4>
+                        <p>You haven’t been eating well for a while - for an out of character month, to be precise. Living primarily off of the continental breakfast for a month will cause malnourishment, and some characters may even enter the RP Malnourished. For each consecutive month you go without eating well, add a -1 modifier to all physical-based rolls, including defense. Eating well for one month will remove this status completely, no matter how long you’ve gone without.k</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Poisoned</h4>
+                        <p>Empty</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Withdrawal</h4>
+                        <p>Empty</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Caught Off Guard</h4>
+                        <p>Someone is trying to attack you by surprise. If - and only if - it is logically possible to spot the foe before being attacked, you may flip a coin by typing /roll passfail. On Pass, you may roll defense as normal. On Fail, you are Caught Off Guard for one round, and take a temporary -3 penalty to your defense roll. There may be times that you are Caught Off Guard without flipping a coin! This penalty is gone on the following round. There are also times when it is more logical to simply take the hit without rolling.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Flanked</h4>
+                        <p>You are being attacked by two or more opponents on different sides. For any opponents you are not facing, take -1 to defense rolls. This condition is also applicable to being attacked from behind by one person without being able to immediately turn, such as some cases of being Restrained.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Knocked Down</h4>
+                        <p>You have been knocked to the ground. Any defense rolls you do against someone above you will receive a -2 penalty. If someone or something is on top of you, such as in the case of being tackled to the ground, you are also Restrained. Anyone who came down to the ground with you is also considered to be Knocked Down, though they do not take a penalty against you if they are on top of you.</p>
+                        <p>There are several ways to lose the Knocked Down status.</p>
+                        <ul>
+                            <li>If you are not in situation where someone has an invested interest in keeping you on the ground, such as a fight, then you may simply stand back up whenever it seems logical.</li>
+                            <li>If you are not Restrained, but are in a fight, you may sacrifice an attack to attempt to stand. /roll passfail - on a Pass, you are able to stand.</li>
+                            <li>If you are Restrained, you may first lose Restrained before attempting to stand. If you lose Restrained (which requires a Pass on /roll passfail), you may attempt to roll to your feet by passing two more /roll passfails in a row, in that round (for a total of three passes, including the one you rolled to lose Restrained).</li>
+                            <li>Alternatively, you can attempt to roll on top of the person pinning you. To do this, you must pass an additional /roll passfail (so two consecutive Passes in the same round, including the one you did to lose Restrained). Then your opponent must /roll passfail. On Fail, you are able to roll on top of him.</li>
+                            <li>If you lose Restrained, but do not succeed in pinning the other person or rolling to your feet, you may attempt to stand the next round. When no longer Restrained, you no longer take -2 against anyone else who is down on the ground with you.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Kneeling</h4>
+                        <p>Unless willfully on your knees for a strategic purpose, you take -2 for defense against anyone standing.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>On Fire</h4>
+                        <p>And not in a good way! You are literally on fire, and suffer a -3 defense penalty until being extinguished. You may not attack with weapons while on fire. If you remain on fire for three straight rounds, you become incapacitated and will die without immediate medical attention. Better stop, drop, and roll. Protection or resistances to fire may reduce or nullify these effects.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Restrained</h4>
+                        <p>You have become partially restrained, either because someone has grabbed you, ensnared you, cuffed you, or otherwise. You cannot use the restrained limb until you break out of it; if your torso, chest, or back is restrained, you simply cannot escape until you break out of it. You may attempt to free yourself at the cost of attacking one target that round. A pass on a /roll passfail will free you. While restrained, you suffer a -1 to defense, and cannot move away.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Imposing</h4>
+                        <p>You are fighting someone significantly smaller or weaker than you, such as an average sized adult fighting an average sized child, or a healthy young adult fighting a elderly person. You get +1 to your Defense against this person. The player must consent to your character being Imposing on their character, or a neutral party may decide.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Armored</h4>
+                        <p>If you are wearing a substantial helmet, you may /roll passfail when taking a blow to the head. On pass, you do not take the related status effect this round.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Guarded</h4>
+                        <p>Your opponent is attacking the same area of your body as he did the previous round. Take +1 to defense for this round. This bonus stacks for every round the opponent continues attacking that area of your body. You may not use this bonus against targets which have you Flanked.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Feeling Lucky</h4>
+                        <p>You are avoiding hits like some kind of crazy dice mongoose. After rolling three successes in a row, add +1 to your next defense roll. This bonus can be maintained by continuing to roll consecutive successes.</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-s-2">
+                        <img src="/Css/images/temp/clock.png" class="hidden-xs" />
+                    </div>
+                    <div class="col-s-10">
+                        <h4>Second Wind</h4>
+                        <p>You’ve been taking a few hits, but have just found your second wind. After rolling two failed defense rolls followed immediately by a successful defense roll, add +1 to your next defense roll. Keep adding +1 to your modifier for each CONSECUTIVE successful defense. This bonus goes away completely the next time you roll anything other than a success, or if the fight ends.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</section>
+
+<section id="diceLinks">
+
+    <fieldset class="heading"><legend>Further Reading</legend></fieldset>
+
+</section>
